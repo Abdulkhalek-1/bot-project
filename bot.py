@@ -1,6 +1,6 @@
 import discord, json, os, sys
 sys.path.append("./utils")
-from database import DataBase
+from utils.database import DataBase
 from discord.ext import commands
 
 # ? bot init
