@@ -202,7 +202,7 @@ class TempRoomControlView(discord.ui.View):
             await interaction.delete_original_response()
             user = view.selected_user
             if user.voice:
-                if (user.voice.channel == voice_channel and not user.guild_permissions.administrator):
+                if (user.voice.channel == voice_channel):
                     self.db_module.update_temp_room_owner(
                         voice_channel.id, user.id)
                     await interaction.followup.send(
